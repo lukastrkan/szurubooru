@@ -7,7 +7,7 @@ version: '2'
 services:
 
   server:
-    image: szurubooru/server:latest
+    image: lukastrkan/szuru-server:latest
     depends_on:
       - sql
     environment:
@@ -27,7 +27,7 @@ services:
       - "./server/config.yaml:/opt/app/config.yaml"
 
   client:
-    image: szurubooru/client:latest
+    image: lukastrkan/szuru-client:latest
     depends_on:
       - server
     environment:
