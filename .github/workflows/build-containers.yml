@@ -21,9 +21,9 @@ jobs:
 
       - name: Determine metadata
         run: |
-          CLOSEST_VER="$(git describe --tags --abbrev=0 $GITHUB_SHA)"
-          CLOSEST_MAJOR_VER="$(echo ${CLOSEST_VER} | cut -d'.' -f1)"
-          CLOSEST_MINOR_VER="$(echo ${CLOSEST_VER} | cut -d'.' -f2)"
+          CLOSEST_VER="clipboard"
+          CLOSEST_MAJOR_VER="1"
+          CLOSEST_MINOR_VER="1"
           SHORT_COMMIT=$(echo $GITHUB_SHA | cut -c1-8)
           BUILD_INFO="v${CLOSEST_VER}-${SHORT_COMMIT}"
           BUILD_DATE="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
